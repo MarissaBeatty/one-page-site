@@ -17,10 +17,11 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    overflow-x: hidden;
 }
 
 .wrapper {
-    max-width: 1280px;
+    width: 100vw;
     margin: 0 auto;
     top: 0;
 }
@@ -122,7 +123,7 @@ a.externalLink:hover {
 /*this is the majority of the content displayed on the right*/
 
 .content {
-  width: 70%;
+  /*width: 70%;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,7 +131,7 @@ a.externalLink:hover {
 }
 
 p {
-  width: 75%;
+  width: 100%;
   padding-left: 5%;
   line-height: 200%;
 }
@@ -152,7 +153,7 @@ div.header {
     background-image: url("images/granadaAtNight.jpg");
     background-size: cover;
     background-attachment: fixed;
-    height: 625px;
+    height: 100vh;
 }
 
 /*Navigation*/
@@ -220,7 +221,7 @@ ul.nav li:active {
 
 div.welcome {
   background: rgb(51, 51, 51);
-  Margin-top:0;
+  margin-top:0;
   margin-bottom: 0;
   height: 700px;
   display: flex;
@@ -234,26 +235,38 @@ h3 {
   color: white;
 }
 
+/*main content area*/
+.h2Box {
+  width: 27vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}  
+
+.h2Box h2 {
+  transition: all 0.75s ease-in-out;
+}
+
+.h2Box h2:hover {
+  transform: scale(1.1);
+  color: #C8A2C8;
+}
 
 /*Who*/
 
 div.whoBox {
-      background: linear-gradient(
-        rgba(0, 0, 0, 0.5), 
-        rgba(0, 0, 0, 0.5)
-        ),
-        url(images/spanishSteps.jpg);
-    
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5)
+  ),
+  url(images/spanishSteps.jpg);
 }
 
 div.who .content {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  width: 70vw;
 }
 
 .bioP {
@@ -273,17 +286,54 @@ div.whatBox {
         rgba(0, 0, 0, 0.5)
         ),
         url(images/colleseum.jpg);
-    
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-div.what .content {
-  flex-direction: column;
+.what .content {
+  flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  width: 61vw;
+}
+
+.siteCard {
+  width: 20vw;
+  height: 35vh;
+  margin-left: 1vw;
+  padding: 1vh 0 1vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f3edf3;
+}
+
+.siteCard h4 {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0.3rem;
+
+}
+.siteCard p {
+  line-height: 120%;
+  max-width: 95%;
+}
+
+.siteLink {
+  text-decoration: none;
+  background-color: #696969;
+  color: white;
+  bottom: 0;
+  padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+  border-radius: 12px;
+  outline: none;
+}
+
+.siteLink:hover {
+  background-color: #000;
+}
+
+.siteLink:active {
+  transform: translate(1.5vw, 1.5vh);
 }
 
 div.whenBox {
@@ -292,43 +342,61 @@ div.whenBox {
         rgba(0, 0, 0, 0.5)
         ),
         url(images/alhambra.jpg);
-    
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-div.whereBox {
+.when .content {
+  flex-direction: column;
+  justify-content: center;
+  width: 55vw;
+}
+
+.when .content p {
+  margin: 1vh 0 1vh 0;
+}
+
+.when .content span {
+  font-weight: bold;
+}
+
+.whereBox {
       background: linear-gradient(
         rgba(0, 0, 0, 0.5), 
         rgba(0, 0, 0, 0.5)
         ),
         url(images/avignonStairs.jpg);
-    
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-div.where .content {
+.where .content {
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  width: 62vw;
+  margin-left: 1.5rem;
+  font-size: 2rem;
+  color: #C8A2C8;
 }
 
 p.icons {
-  font-size: 2rem;
+  font-size: 4rem;
   margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 p.icons a {
   text-decoration: none;
-  color: rgb(51, 51, 51);
+  margin: 0 2rem 0 2rem;
+  color: #C8A2C8;
+  transition: all 0.75s ease-in-out;
 }
 
-
+.icons a:hover {
+  transform: scale(1.1);
+  color: #f3edf3;
+}
 
 
 div.whyBox {
@@ -337,11 +405,17 @@ div.whyBox {
         rgba(0, 0, 0, 0.5)
         ),
         url(images/lisbonFestas2.jpg);
-    
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+div.why .content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: text-start;
+  width: 62vw;
+}
+
+.why .content p {
+  width: 45vw;
 }
 
 div.howMuchBox {
@@ -350,37 +424,13 @@ div.howMuchBox {
         rgba(0, 0, 0, 0.5)
         ),
         url(images/pantheon.jpg);
-    
-  height: 300px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 div.howMuch .content {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-}
-
-div.howMuch .content p, 
-div.howMuch .content ul {
-  padding-left: 5%;
-  width: 70%;
-}
-
-div.howMuch .content ul {
-  list-style: none;
-}
-
-ul.contactList a {
-  text-decoration: none;
-  color: black;
-}
-
-ul.contactList i {
-  font-size: 2rem;
-
+  width: 55vw;
 }
 
 /*Responsive!!!*/
@@ -534,11 +584,6 @@ ul.contactList i {
       height: auto;
     }  
 
-    p {
-      width: 90%;
-      padding: 5%;
-    }
-
     div.who .content {
       flex-direction: column;
     }
@@ -550,8 +595,8 @@ ul.contactList i {
     p.icons {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      align-items: space-between;
+      justify-content: center;
+      align-items: center;
     }
 
 }
