@@ -506,7 +506,7 @@ div.howMuch .content {
 
 /*iPhone Portrait*/
 
-@media (max-width: 320px) {
+@media (max-width: 414px) {
 
     /*body*/
 
@@ -580,16 +580,61 @@ div.howMuch .content {
     }
      
     .content {
-      width: 100%;
+      width: 100vw;
       height: auto;
+      flex-direction: column;
     }  
 
     div.who .content {
       flex-direction: column;
+      width: 100vw;
+    }
+
+    .what .content {
+      flex-direction: column;
+      width: 100vw;
+    }
+
+    .siteCard {
+      width: 90vw;
+      height: 40vh;
+      margin: 2vh 0 2vh 0;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
+
+    .siteCard h4 {
+      margin-bottom: 0;
+    }
+
+    .siteCard p {
+      margin-top: 0;
+    }
+
+    .siteCard a {
+      width: 40vw;
+      text-align: center;
     }
 
     img.bioPic {
-      display: flex;
+      display: none;
+    }
+
+    .when p {
+      width: 100vw;
+    }
+
+    .where .content {
+      width: 100vw;
+    }
+
+    .why .content {
+      width: 100vw;
+    }
+
+    .why .content p {
+      width : 90vw;
     }
 
     p.icons {
@@ -597,7 +642,11 @@ div.howMuch .content {
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      width: 100vw;
+      margin-top: 10vh;
     }
+
+
 
 }
 
